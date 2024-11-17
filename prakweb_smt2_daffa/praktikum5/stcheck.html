@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Checkbox</title>
+  <style>
+    input[type="checkbox"]{
+      display: none;
+    }
+    input[type="checkbox"] + label:before{
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;  
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      background-color: royalblue;
+      box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+    input[type="checkbox"]:checked + label:before{
+      content: "\2714";
+      color: mediumspringgreen;
+      background-color: navy;
+      text-align: center;
+      text-shadow: 0px 0px 3px red;
+    }
+  </style>
+</head>
+<body>
+  <form method="post" action="#">
+    <input type="checkbox" id="cb1" name="cb" value="Indonesia"><label for="cb1">Indonesia</label><br>
+    <input type="checkbox" id="cb2" name="cb" value="Inggris"><label for="cb2">Inggris</label><br>
+    <input type="checkbox" id="cb3" name="cb" value="Jepang"><label for="cb3">Jepang</label>
+  </form>
+</body>
+</html>

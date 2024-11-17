@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir</title>
+  <style>
+  fieldset {
+    width: 620px;
+    background-color: #f0ffff;
+    border: 3px solid #004f00;
+  }
+  legend {
+    background-color: #ffa600;
+    font-family: comic sans ms;
+    font-size: 14pt;
+    color: white;
+  }
+  input,textarea,select,option{
+    border: 2px solid #299429;
+  }
+  input,label,select,option{
+    margin-left: 10px;
+    margin-top: 3px;
+    height: 23px;
+    width: 240px;
+  }
+  input:focus, textarea:focus{
+    border: 3px solid #004f00;
+  }
+  input.button{
+    background: white;
+    border: 1px solid #299429;
+    border-color: black;
+    font-family: 'Times New Roman';
+    font-size: 12pt;
+    margin: 5px;
+  }
+  input.nilai {
+    width: 120px;;
+  }
+  input.button:hover{
+    border: 2px dashed ;
+    cursor: pointer;
+  }
+  input.button:active {
+    background: blue;;
+  }
+  input[type="radio"] {
+      display: none;
+    }
+    input[type="radio"] + label:before {
+      background-color: #80ffd4;
+      content: "";
+      margin: 5px;
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 8px;
+      box-shadow: inset 0px 2px 2px rgb(0,0,0,.3);
+      border-radius: 15px;
+    }
+    input[type="radio"]:checked + label:before {
+      background-color: #80ffd4;
+      content: "\2022";
+      color: white;
+      background-color: #80ffd4;
+      font-size: 3em;
+      text-align: center;
+      line-height: 20px;
+      text-shadow: 0px 0px 3px red;
+    }
+    input[type="checkbox"]{
+      display: none;
+    }
+    input[type="checkbox"] + label:before{
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;  
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      background-color: #80ffd4;
+      box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+    input[type="checkbox"]:checked + label:before{
+      content: "\2714";
+      color: white;
+      background-color: #80ffd4;
+      text-align: center;
+    }
+    .button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    background-color: #004d99;
+  }
+  </style>
+</head>
+<body>
+  <fieldset>
+    <legend>Universitas Patilan Ikip</legend>
+    <form method="post" action="#">
+      
+      <label for="nama">Nama</label><br>
+      <input type="text" id="nama" name="nama" required><br>
+      <label for="sekolah">Asal Sekolah</label><br>
+      <input type="text" id="nama" name="nama" required><br>
+      <input type="radio" id="rb1" name="rb" value="Pria"><label for="rb1">Pria</label><br>
+      <input type="radio" id="rb2" name="rb" value="Wanita"><label for="rb2">Wanita</label><br>
+      <label for="agama">Agama</label><br>
+      <select id="agama" name="agama" required>
+        <option value="">--PILIH--</option>
+        <option value="Islam">Islam</option>
+        <option value="Kristen">Kristen</option>
+        <option value="Hindu">Hindu</option>
+        <option value="Budha">Budha</option>
+      </select><br>
+      <label for="nama">Nilai</label><br>
+      <input type="text" id="nilai" name="nilai" placeholder="Matematika" class="nilai" required>
+      <input type="text" id="nilai" name="nilai" placeholder="Bahasa Indonesia" class="nilai" required>
+      <input type="text" id="nilai" name="nilai" placeholder="Bahasa Inggris" class="nilai" required>
+      <br>
+      <label for="fakultasi">Fakultas Pilihan</label><br>
+      <select name="fakultas">
+        <option value="">--PILIH--</option>
+        <option value="fip">Fakultas Ilmu Pendidikan</option>
+        <option value="fpbs">Fakultas Pendidikan Bahasa dan Seni</option>
+        <option value="fpo">Fakultas Pendidikan Olahraga dan Kesehatan</option>
+        <option value="fptk">Fakultas Pendidikan Teknik dan Kejuruan</option>
+        <option value="fpmipa">Fakultas Pendidikan Matematika dan Ilmu Pengetahuan Alam</option>
+        <option value="fpips">Fakultas Pendidikan Ilmu Pengetahuan Sosial</option>
+        <option value="fpeb">Fakultas Pendidikan Ekonomi dan Bisnis</option>
+      </select><br>
+      <label for="setuju">Anda menyetujui persyaratan yang berlaku</label><br>
+      <input type="checkbox" id="setuju" name="setuju" value="Setuju"><label for="setuju">Setuju</label><br>
+      <button type="submit" class="button">Submit</button>
+      <button type="reset" class="button">Reset</button>
+    </form>
+  </fieldset>
+</body>
+</html>

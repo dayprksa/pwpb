@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perjumlahan</title>
+  <script>
+    function hitung(){
+      var a = parseInt(document.getElementById('x').value);
+      var b = parseInt(document.getElementById('y').value);
+      var hasil = a + b;
+      document.getElementById("hasil").value = hasil;
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <input type="text" id="x" placeholder="Angka Pertama"><br>
+    <input type="text" id="y" placeholder="Angka Kedua"><br>
+    <input type="text" id="hasil" placeholder="Hasil" disabled>
+    <input type="button" id="button" value="Hitung" onclick="hitung()">
+  </form>
+</body>
+</html>

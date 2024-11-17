@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ubah Gambar</title>
+  <script>
+    function ubahGambar(){
+      var gambar = document.getElementById('gmbr');
+      if (gambar.src.match("sepak")){
+        gambar.src = "bola_basket.png";
+      }else {
+        gambar.src = "bola_sepak.png";
+      }
+    }
+  </script>
+</head>
+<body>
+  <img src="bola_basket.png" id="gmbr" onclick="ubahGambar()" width="225px" height="225px">
+  <p>Klik untuk mengubah gambar</p>
+</body>
+</html>

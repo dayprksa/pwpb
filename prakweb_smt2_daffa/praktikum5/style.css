@@ -1,0 +1,41 @@
+fieldset {
+  width: 620px;
+  background-color: cyan;
+}
+legend {
+  background-color: gainsboro;
+  font-family: comic sans ms;
+  font-size: 14pt;
+}
+form {
+  border: 5px solid darkslategray;
+  width: 600px;
+  margin-left: 0;
+  background-color: gainsboro;
+  padding: 10px;
+}
+input,textarea{
+  border: 2px solid #c6e6e6;
+  border-radius: 5px;
+}
+input{
+  height: 30px;
+}
+input:focus, textarea:focus{
+  border: 3px solid royalblue;
+}
+input.button{
+  background: lightblue;
+  border: 1px dashed white;
+  border-color: black;
+  font-family: verdana;
+  font-size: 12pt;
+  margin: 5px;
+}
+input.button:hover{
+  border: 2px dashed blue;
+  cursor: pointer;
+}
+input.button:active {
+  background: blue;;
+}

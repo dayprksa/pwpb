@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ubah CSS</title>
+  <script>
+    function ubahStyle(){
+      var x = document.getElementById('teks');
+      x.style.fontSize = "24pt";
+      x.style.color = "blue";
+    }
+  </script>
+</head>
+<body>
+  <p id="teks">Ukuran dan warna pada teks ini akan berubah apabila tombol dibawah di klik</p>
+  <button type="button" onclick="ubahStyle()">Klik Saya</button>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Geometri</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="side.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <h1>Kalkulator Geometri</h1>
+    </div>
+
+    <div class="form-container">
+      <div class="form-column">
+        <h2>Luas Lingkaran</h2>
+        <div class="input-group">
+          <input type="number" id="r_lingkaran" placeholder="Jari-Jari Lingkaran (cm)" min="0">
+          <input type="text" id="luas_lingkaran" placeholder="Luas Lingkaran (cm²)" disabled>
+          <input type="button" value="Hitung Luas Lingkaran" onclick="luasLingkaran()">
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="form-column">
+        <h2>Luas Tabung</h2>
+        <div class="input-group">
+          <input type="number" id="r_tabung" placeholder="Jari-Jari Tabung (cm)" min="0">
+          <input type="number" id="t_tabung" placeholder="Tinggi Tabung (cm)" min="0">
+          <input type="text" id="luas_tabung" placeholder="Luas Tabung (cm³)" disabled>
+          <input type="button" value="Hitung Luas Tabung" onclick="luasTabung()">
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="form-column">
+        <h2>Nilai Rata-Rata</h2>
+        <div class="input-group">
+          <input type="number" class="input_rata_rata" placeholder="Nilai ke-1">
+          <input type="number" class="input_rata_rata" placeholder="Nilai ke-2">
+          <input type="number" class="input_rata_rata" placeholder="Nilai ke-3">
+          <input type="number" class="input_rata_rata" placeholder="Nilai ke-4">
+          <input type="number" class="input_rata_rata" placeholder="Nilai ke-5">
+          <input type="number" class="input_rata_rata" placeholder="Nilai ke-6">
+          <input type="number" class="input_rata_rata" placeholder="Nilai ke-7">
+          <input type="number" class="input_rata_rata" placeholder="Nilai ke-8">
+          <input type="number" class="input_rata_rata" placeholder="Nilai ke-9">
+          <input type="number" class="input_rata_rata" placeholder="Nilai ke-10">
+          <input type="text" id="rata_rata" placeholder="Nilai Rata-Rata" disabled>
+          <input type="button" value="Hitung Rata-Rata" onclick="nilaiRataRata()">
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Daffa Jaya Perkasa</p>
+    </footer>
+  </div>
+</body>
+</html>

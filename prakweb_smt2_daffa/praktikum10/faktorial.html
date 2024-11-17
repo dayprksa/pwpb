@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faktorial</title>
+    <style>
+        body {
+            background-image: url('https://source.unsplash.com/1600x900/?sky'); /* Gambar latar belakang */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-out;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+        }
+        input:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        #calculate-button {
+            background-color: #28a745;
+        }
+        #calculate-button:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+        #reset-button {
+            background-color: #dc3545;
+        }
+        #reset-button:hover {
+            background-color: #c82333;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Perhitungan Faktorial</h2>
+        <div class="form-group">
+            <label for="number">N</label>
+            <input type="number" id="number" min="0" placeholder="Masukkan angka" />
+        </div>
+        <div class="form-group">
+            <label for="factorial-result">Hasil Faktorial</label>
+            <input type="text" id="factorial-result" readonly />
+        </div>
+        <div class="form-group">
+            <label for="sum-result">Jumlah</label>
+            <input type="text" id="sum-result" readonly />
+        </div>
+        <div class="button-group">
+            <button id="calculate-button" onclick="calculateFactorial()">Hitung</button>
+            <button id="reset-button" onclick="resetForm()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        function calculateFactorial() {
+            const number = document.getElementById('number').value;
+            if (number === '' || number < 0) {
+                alert('Masukkan angka valid');
+                return;
+            }
+
+            let factorial = 1;
+            let sum = 0;
+            for (let i = 1; i <= number; i++) {
+                factorial *= i;
+                sum += i;
+            }
+
+            document.getElementById('factorial-result').value = factorial;
+            document.getElementById('sum-result').value = sum;
+        }
+
+        function resetForm() {
+            document.getElementById('number').value = '';
+            document.getElementById('factorial-result').value = '';
+            document.getElementById('sum-result').value = '';
+        }
+    </script>
+</body>
+</html>

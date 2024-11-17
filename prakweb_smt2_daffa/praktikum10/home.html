@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .nav {
+            background-color: #000000;
+            padding: 15px 0;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav ul li a:hover {
+            color: #cccccc;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .school-logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        .school-name {
+            color: #000000;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .school-motto {
+            color: #666666;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .main-content {
+            display: flex;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .content-left {
+            flex: 3;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .berita-box {
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .content-right {
+            flex: 1;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .content-left h2 {
+            color: #000000;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .content-left p {
+            color: #444444;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .content-left ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: #444444;
+        }
+
+        .link-artikel h3 {
+            color: #000000;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .link-artikel ul {
+            list-style: none;
+        }
+
+        .link-artikel ul li {
+            margin-bottom: 12px;
+        }
+
+        .link-artikel ul li a {
+            color: #444444;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .link-artikel ul li a:hover {
+            color: #000000;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000000;
+            color: #ffffff;
+            margin-top: auto;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .author-info {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="perulangan_for.html">Contoh For</a></li>
+            <li><a href="perulangan_while.html">Contoh While</a></li>
+            <li><a href="perulangan_dowhile.html">Contoh Do While</a></li>
+            <li><a href="perulangan_for2.html">Contoh For 2</a></li>
+            <li><a href="perulangan_dowhile2.html">Contoh Do While 2</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="header">
+            <img src="path-to-logo.png" alt="SMK Logo" class="school-logo">
+            <h1 class="school-name">SMK Negeri 1 Katapang</h1>
+            <p class="school-motto">Disiplin-Belajar-Berlatih-Berkarya-Inovatif</p>
+        </header>
+
+        <div class="main-content">
+            <div class="content-left">
+                <h2>Tugas Jobsheet 10 Pemograman Web</h2>
+                <p class="author-info">Written By: Daffa Jaya Perkasa | SMKN 1 Katapang | Minggu 17 November 2024</p>
+                
+                <div class="berita-box">
+                    Berita
+                </div>
+
+                <h3>Hello World</h3>
+                <p>Kali ini admin memberi Tugas Jobsheet 10 tentang penggunaan Perulangan di Javascript. Disini admin memberi contoh program penggunaan Perulangan yaitu:</p>
+                <ol>
+                    <li>Perulangan For</li>
+                    <li>Perulangan While</li>
+                    <li>Perulangan Do While</li>
+                </ol>
+                <p>Langsung aja untuk melihat contoh programnya klik pada menu di atas.</p>
+            </div>
+
+            <div class="content-right">
+                <div class="link-artikel">
+                    <h3>Link Artikel</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="perulangan_for.html">Contoh For</a></li>
+                        <li><a href="perulangan_while.html">Contoh While</a></li>
+                        <li><a href="perulangan_dowhile.html">Contoh Do While</a></li>
+                        <li><a href="perulangan_for2.html">Contoh For 2</a></li>
+                        <li><a href="perulangan_dowhile2.html">Contoh Do While 2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        Copyright © 2024 | Created by: Daffa Jaya Perkasa | SMK Negeri 1 Katapang
+    </footer>
+</body>
+</html>

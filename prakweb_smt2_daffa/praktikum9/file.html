@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Travel</title>
+  <style>
+    /* Reset styles for margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Basic styles for body */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    /* Navbar styles */
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+    }
+
+    .navbar {
+      list-style-type: none;
+      text-align: center;
+    }
+
+    .navbar li {
+      display: inline;
+      margin: 0 20px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+      transition: background-color 0.3s;
+    }
+
+    /* Hover effect */
+    .navbar a:hover {
+      background-color: #575757;
+      border-radius: 5px;
+    }
+
+    /* Styling forms and tables */
+    form {
+      width: 70%;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+  <script>
+    // JavaScript functions for different pages
+
+    // Aplikasi Travel
+    function hitungTotal() {
+      var nama = document.fform.inama.value;
+      var tujuan = document.fform.itujuan.value;
+      var jumlahtiket = parseInt(document.fform.ijumlah.value);
+      var ht = 0.0;
+      var sub = 0.0;
+      var diskon = 0.0;
+      var total = 0.0;
+
+      // Perbaikan operator perbandingan
+      if (tujuan === "Jakarta") {
+        ht = 100000;
+      } else if (tujuan === "Cirebon") {
+        ht = 150000;
+      } else if (tujuan === "Tasikmalaya") {
+        ht = 200000;
+      }
+
+      // Hitung subtotal
+      sub = jumlahtiket * ht;
+
+      // Pengecekan checkbox member
+      if (document.fform.imember.checked === true) {
+        diskon = 0.10 * sub;
+      } else {
+        diskon = 0.0;
+      }
+
+      // Hitung total bayar
+      total = sub - diskon;
+
+      // Tampilkan hasil pada form
+      document.fform.otiket.value = ht;
+      document.fform.osub.value = sub;
+      document.fform.odiskon.value = diskon;
+      document.fform.ototal.value = total;
+    }
+
+    // Indeks Prestasi
+    function hitungIndeks() {
+      const quiz = document.getElementById('quiz').value * 0.1;
+      const tugas = document.getElementById('tugas').value * 0.2;
+      const uts = document.getElementById('uts').value * 0.3;
+      const uas = document.getElementById('uas').value * 0.4;
+      
+      const total = quiz + tugas + uts + uas;
+      document.getElementById('indeks').value = total.toFixed(2);
+      
+      let keterangan = '';
+      if (total >= 80) {
+        keterangan = 'A (Sangat Baik)';
+      } else if (total >= 70) {
+        keterangan = 'B (Baik)';
+      } else if (total >= 60) {
+        keterangan = 'C (Cukup)';
+      } else if (total >= 50) {
+        keterangan = 'D (Kurang)';
+      } else {
+        keterangan = 'E (Sangat Kurang)';
+      }
+      
+      document.getElementById('keterangan').value = keterangan;
+    }
+
+    function resetForm() {
+      document.getElementById('quiz').value = '';
+      document.getElementById('tugas').value = '';
+      document.getElementById('uts').value = '';
+      document.getElementById('uas').value = '';
+      document.getElementById('indeks').value = '';
+      document.getElementById('keterangan').value = '';
+    }
+
+    // Percabangan Tanya Bilangan
+    function tanyaBilangan() {
+      var bil = parseFloat(document.ffrom.bilangan.value);
+      var jenis = " ";
+      if (isNaN(bil)) {
+        alert("Anda belum memasukan bilangan");
+      } else {
+        if (bil > 0) {
+          jenis = "adalah bilangan positif";
+        } else if (bil < 0) {
+          jenis = "adalah bilangan negatif";
+        } else {
+          jenis = "adalah bilangan nol";
+        }
+        alert(bil + " " + jenis);
+      }
+    }
+
+    // Percabangan Switch
+    function tanyaPulsa() {
+      var pilihan = prompt("Pilihan untuk cek pulsa\n1. Informasi pulsa anda\n2. Informasi masa aktif dan masa tenggang anda");
+      pilihan = parseInt(pilihan);
+      switch (pilihan) {
+        case 1:
+          alert("Jumlah pulsa anda adalah 15.000");
+          break;
+        case 2:
+          alert("Masa aktif kartu anda hingga 7 Agustus 2019");
+          break;
+        default:
+          alert("Pilihlah sesuai nomor yang ada");
+          break;
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="#travel">Travel</a></li>
+      <li><a href="#bulan">Bulan</a></li>
+      <li><a href="#indeks">Indeks Prestasi</a></li>
+      <li><a href="#bilangan">Bilangan</a></li>
+      <li><a href="#pulsa">Pulsa</a></li>
+    </ul>
+  </nav>
+
+  <!-- Travel Form -->
+  <section id="travel">
+    <form name="fform">
+      <table border="1" align="center">
+        <tr>
+          <td colspan="2">
+            <h2 align="center">Katapang Travel</h2>
+          </td>
+        </tr>
+        <tr>
+          <td width="35%">
+            Nama : <input type="text" name="inama"><br>
+            Tujuan :
+            <select name="itujuan">
+              <option value="Jakarta">Jakarta</option>
+              <option value="Cirebon">Cirebon</option>
+              <option value="Tasikmalaya">Tasikmalaya</option>
+            </select><br>
+            Jumlah Tiket : <input type="text" name="ijumlah"><br>
+            Member : <input type="checkbox" name="imember">Ya<br>
+          </td>
+          <td width="35%">
+            Harga Tiket : <input type="text" name="otiket" readonly><br>
+            Sub Total : <input type="text" name="osub" readonly><br>
+            Diskon : <input type="text" name="odiskon" readonly><br>
+            Total Bayar : <input type="text" name="ototal" readonly><br>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <center>
+              <input type="button" value="Hitung" onclick="hitungTotal()">
+              <input type="reset" value="Ulang">
+            </center>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </section>
+
+  <!-- Bulan Search -->
+  <section id="bulan">
+    <h4>Masukan Nomor Bulan (1-12):
+      <input type="number" id="caribulan" placeholder="1-12">
+      <input type="button" value="Search" onclick="cariBulan()">
+      <input type="reset" value="Ulang">
+    </h4>
+    <p id="result"></p>
+    <script>
+      var bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+      function cariBulan() {
+        var i = parseInt(document.getElementById("caribulan").value);
+        var pilihBulan = bulan[i - 1] || "Bulan tidak ditemukan";
+        document.getElementById("result").innerHTML = pilihBulan;
+      }
+    </script>
+  </section>
+
+  <!-- Indeks Prestasi -->
+  <section id="indeks">
+    <table border="1">
+      <tr>
+        <td colspan="4">Menghitung Indeks Prestasi</td>
+      </tr>
+      <tr>
+        <td>Quiz (10%): <input type="number" id="quiz"></td>
+        <td>Tugas (20%): <input type="number" id="tugas"></td>
+        <td>UTS (30%): <input type="number" id="uts"></td>
+        <td>UAS (40%): <input type="number" id="uas"></td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <input type="button" value="Hitung" onclick="hitungIndeks()">
+          <input type="button" value="Reset" onclick="resetForm()">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">Indeks Prestasi:
+          <input type="text" id="indeks" readonly>
+          Keterangan:
+          <input type="text" id="keterangan" readonly>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Tanya Bilangan -->
+  <section id="bilangan">
+    <form name="ffrom">
+      <h2>Bilangan Negatif, Nol, Atau Positif ???</h2>
+      <p>Masukan Bilangan : <input type="number" size="11" name="bilangan"><br><br>
+      <input type="button" value="Tanya" onclick="tanyaBilangan()">
+      <input type="reset" value="Ulang"></p>
+    </form>
+  </section>
+
+  <!-- Percabangan Switch -->
+  <section id="pulsa">
+    <button onclick="tanyaPulsa()">Cek Pulsa</button>
+  </section>
+</body>
+</html>

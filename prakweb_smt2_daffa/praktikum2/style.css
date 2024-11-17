@@ -1,0 +1,33 @@
+body {
+    background:pink;
+    color: white;
+    margin: 0px;
+}
+.link {
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    margin-left: 800px;
+}
+#nama {
+    background: purple;
+    width: 60%;
+    margin-top: 0px;
+    margin-right: 200px;
+    height: 50px;
+    padding: 10px;
+    text-align: right;
+}
+#nama2 {
+    background: red;
+    width: 60%;
+    margin-top: 0px;
+    margin-right: 200px;
+    height: 50px;
+    padding: 10px;
+    text-align: right;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}

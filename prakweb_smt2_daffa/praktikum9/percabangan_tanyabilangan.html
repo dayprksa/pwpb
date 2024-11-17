@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percabangan Tanya Bilangan</title>
+  <script>
+    function tanyaBilangan (){
+      var bil = parseFloat(document.ffrom.bilangan.value);
+      var jenis = " ";
+      if (isNaN(bil)){
+        alert("Anda belum memasukan bilangan");
+      } else {
+        if (bil > 0){
+          jenis = "adalah bilangan positif";
+        } else if (bil < 0){
+          jenis = "adalah bilangan negatif";
+        } else {
+          jenis = "adalah bilangan nol";
+        }
+        alert(bil+" "+jenis);
+        }
+    }
+  </script>
+</head>
+<body>
+  <form name="ffrom">
+    <h2>Bilangan Negatif, Nol, Atau Positif ???</h2>
+    <p>Masukan Bilangan : <input type="number" size="11" name="bilangan"><br><br>
+    <input type="button" value="Tanya" onclick="tanyaBilangan()">
+    <input type="reset" value="Ulang"></p>
+  </form>
+</body>
+</html>

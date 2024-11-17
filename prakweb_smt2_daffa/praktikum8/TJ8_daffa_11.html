@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemrograman Web</title>
+</head>
+<body>
+    <input type="number" id="carimobil" placeholder="1-10">
+    <input type="button" value="Search" onclick="searchMobil()">
+    <p id="data"></p>
+    <p id="mobil"></p>
+    <p id="result"></p>
+    <script>
+        var mobil = ["Lamborghini", "Ferrari", "Audi", "Bugatti", "Citroen", "Jaguar", "Mercedes", "Benz", "BMW", "Shelby"];
+        document.getElementById("data").innerHTML = mobil.join(", ");
+        function searchMobil() {
+            var i = parseInt(document.getElementById("carimobil").value);
+            var selectedMobil = mobil[i - 1] || "Mobil tidak ditemukan";
+            document.getElementById("result").innerHTML = 
+                "elemen ke " + i + " dari array diatas adalah " + selectedMobil;
+        }
+    </script>
+</body>
+</html>

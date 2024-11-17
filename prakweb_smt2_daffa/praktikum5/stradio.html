@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    input[type="radio"] {
+      display: none;
+    }
+    input[type="radio"] + label:before {
+      background-color: darkslategray;
+      content: "";
+      margin: 5px;
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 8px;
+      box-shadow: inset 0px 2px 2px rgb(0,0,0,.3);
+      border-radius: 15px;
+    }
+    input[type="radio"]:checked + label:before {
+      background-color: darkgray;
+      content: "\2022";
+      color: white;
+      background-color: blue;
+      font-size: 3em;
+      text-align: center;
+      line-height: 30px;
+      text-shadow: 0px 0px 3px red;
+    }
+  </style>
+</head>
+<body>
+  <form method="post" action="#">
+    <input type="radio" id="rb1" name="rb" value="Laki-laki"><label for="rb1">Laki-laki/Male</label><br>
+    <input type="radio" id="rb2" name="rb" value="Perempuan"><label for="rb2">Perempuan/Female</label><br>
+  </form>
+</body>
+</html>

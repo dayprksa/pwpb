@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+  <script>
+    arrayTes [0] = "Hello";
+    arrayTes ["Andry"] = 10;
+    arrayTes ["Sandra"] = 47;
+  </script>
+</head>
+<body>
+  <h2>Contoh Array Push</h2>
+  <p>PUSH digunakan untuk menambah data pada bagian akhir sebuah array</p>
+    <form name="ffrom">
+      <input type="text" id="text" name="text" placeholder="Masukkan data baru">
+      <input type="button" value="Tambahkan" onclick="pushData()">
+    </form>
+    <p id="tampil">Data akan ditampil disini</p>
+    <script>
+      var fruits = [];
+      function pushData() {
+        fruits.push(document.ffrom.text.value);
+        document.getElementById('tampil').innerHTML = "Data yang anda masukan: " + fruits;
+      }
+    </script>
+</body>
+</html>
