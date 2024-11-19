@@ -6,7 +6,7 @@
   <title>Model Non Embed Code</title>
 </head>
 <body>
-  <?
+  <?php
     echo "Hello world!<br>";
     echo "Selamat datang di Pemrograman web PHP";
   ?>
