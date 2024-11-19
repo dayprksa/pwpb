@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pemrograman web</title>
+  <script>
+    function SegiEmpat (){
+      SegiEmpat.prototype.panjang = 0;
+      SegiEmpat.prototype.lebar = 0;
+      SegiEmpat.prototype.hitungLuas = function() {
+        var luas = this.panjang * this.lebar;
+        return luas;
+      }
+      SegiEmpat.prototype.hitungKeliling = function() {
+        var kel = 2 * (this.panjang + this.lebar);
+        return kel;
+      }
+    }
+    var s = new SegiEmpat();
+    s.panjang = 4;
+    s.lebar = 3;
+    document.write("Luasnya = " +s.hitungLuas()+"<br>");
+    document.write("Kelilingnya = " +s.hitungKeliling());
+  </script>
+</head>
+</html>

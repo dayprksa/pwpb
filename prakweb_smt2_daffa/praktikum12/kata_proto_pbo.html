@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pemrograman web</title>
+  <script>
+    function mobil (wrn,bb){
+      this.warna = wrn;
+      this.bahanBakar = bb;
+    }
+    mobil.prototype.merk = "Lamborghini";
+    var h = new mobil("merah","bensin");
+    document.write("Mobil dengan merk "+h.merk +" Memiliki Warna "+h.warna+" dan menggunakan bahan bakar "+h.bahanBakar);
+  </script>
+</head>
+</html>
