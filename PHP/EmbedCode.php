@@ -1,3 +1,5 @@
+<!-- Program: EmbedCode.php
+Oleh: Daffa Jaya Perkasa -->
 <?php
   echo("<html>");
   echo("<head><title>Model Embed Code</title></head>");

@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Program: NonEmbedCode.php
+Oleh: Daffa Jaya Perkasa -->
+<html>
+  <head>
   <title>Model Non Embed Code</title>
-</head>
+  </head>
 <body>
   <?php
-    echo "Hello world!<br>";
-    echo "Selamat datang di Pemrograman web PHP";
+  echo "Hello world!<br>";
+  echo "Selamat datang di Pemrograman Web PHP";
   ?>
 </body>
 </html>
